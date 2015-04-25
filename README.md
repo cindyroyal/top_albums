@@ -227,5 +227,7 @@ end
 ```
 
 Also, to make the relative references work above, make sure to remove the comment for that section in the config.rb file.
+```
  # Use relative URLs
   activate :relative_assets
+```
