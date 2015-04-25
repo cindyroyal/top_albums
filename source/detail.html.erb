@@ -1,0 +1,20 @@
+<div class="m-grid">
+  <div class="row">
+    <div class="col-md-3">
+      <ul class="usernames">
+        <li><a href="../twelvelabs.html" class="<%= 'active' if username == 'twelvelabs' %>">twelvelabs</a></li>
+        <li><a href="../clockwerks.html" class="<%= 'active' if username == 'clockwerks' %>">clockwerks</a></li>
+      </ul>
+    </div>
+    <div class="col-md-9">
+      <p>
+        <a href="<%= album['url'] %>"><img src="<%= album['image'][3]['#text'] %>" width="300" height="300" /></a>
+      </p>
+      <p>
+        <a href="<%= album['artist']['url'] %>"><%= album['artist']['name'] %></a> -
+        <a href="<%= album['url'] %>"><%= album['name'] %></a>
+      </p>
+      <p><%= album['playcount'] %> total plays</p>
+    </div>
+  </div>
+</div>

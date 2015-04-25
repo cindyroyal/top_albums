@@ -1,0 +1,105 @@
+// Include compass (see: http://compass-style.org for more info)
+// Compass is available as part of middleman.
+@import 'compass';
+
+// Remove the default styles applied by each browser so you can
+// style them consistantly (see: http://cssreset.com/what-is-a-css-reset/).
+@import 'compass/reset';
+
+// icon font for retina-friendly icons (see: http://www.vanseodesign.com/web-design/icon-fonts/)
+@import 'fonts';
+// A responsive grid based off of Bootstrap's (see: http://getbootstrap.com/css/#grid)
+@import 'grid';
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: inherit;
+  line-height: 1.5;
+  margin-top: 100px;
+}
+
+
+.m-sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+
+  border-bottom: 1px solid darken(#292929, 10%);
+  background-color: rgba(#292929, 0.9);
+  z-index: 100;
+
+  .buttons {
+    display: block;
+    position: absolute;
+    li {
+      display: inline-block;
+      line-height: 49px;
+      text-align: center;
+      border-left: 1px solid darken(#292929, 10%);
+      overflow-y: hidden;
+      a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .links {
+    a {
+      padding: 0 1em;
+    }
+  }
+
+  .social {
+    top: 0;
+    right: 0;
+    font-size: 0;
+    li {
+      width: 50px;
+      a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+      }
+      .icon-twitter,
+      .icon-facebook {
+        @include transition (background-color ease-in-out 0.3s);
+      }
+      &:hover {
+        .icon-twitter {
+          background-color: #00ACEE;
+        }
+        .icon-facebook {
+          background-color: #3B5998;
+        }
+      }
+      &:active {
+        a {
+          padding-top: 2px;
+          margin-bottom: -2px;
+        }
+      }
+    }
+  }
+
+}
+
+.usernames {
+  margin-bottom: 2em;
+}
+
+.usernames .active {
+  font-weight: bold;
+}

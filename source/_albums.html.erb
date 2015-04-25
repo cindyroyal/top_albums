@@ -1,0 +1,17 @@
+<div class="m-grid">
+  <div class="row">
+    <div class="col-md-3">
+      <ul class="usernames">
+        <li><a href="twelvelabs.html" class="<%= 'active' if username == 'twelvelabs' %>">twelvelabs</a></li>
+        <li><a href="clockwerks.html" class="<%= 'active' if username == 'clockwerks' %>">clockwerks</a></li>
+      </ul>
+    </div>
+    <div class="col-md-9">
+
+      <% data[username]['topalbums']['album'].each do |a| %>
+        <a href="<%= username %>/<%= a['@attr']['rank'] %>.html"><img src="<%= a['image'][1]['#text'] %>" width="64" height="64" /></a>
+      <% end %>
+
+    </div>
+  </div>
+</div>
